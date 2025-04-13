@@ -13,10 +13,11 @@ import {
   BarChart,
   Lock
 } from 'lucide-react';
+import { LucideIcon } from 'lucide-react';
 
 interface Skill {
   name: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: LucideIcon; // Using LucideIcon type to match the icons
   details: string[];
 }
 
