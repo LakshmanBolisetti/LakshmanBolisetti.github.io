@@ -12,38 +12,29 @@ interface Education {
 const EducationSection = () => {
   const educationItems: Education[] = [
     {
-      degree: 'Master of Science in Computer Science',
-      institution: 'Stanford University',
-      year: '2014 - 2016',
-      description: 'Specialized in Distributed Systems and Cloud Computing. Thesis on "Automated Deployment Strategies for Microservice Architectures".'
+      degree: 'B.Tech (Civil Engineering)',
+      institution: 'Bonam Venkata Chalamayya Institute of Technology and Science, Amalapuram',
+      year: '2020',
+      description: 'Affiliated to J.N.T.University, Kakinada. Graduated with 8.1 CGPA.'
     },
     {
-      degree: 'Bachelor of Science in Computer Engineering',
-      institution: 'University of California, Berkeley',
-      year: '2010 - 2014',
-      description: 'Focus on Software Engineering and Systems Programming. Participated in the university\'s open-source initiative.'
+      degree: 'Intermediate (MPC)',
+      institution: 'Vidyanidhi Junior College, Amalapuram',
+      year: '2016',
+      description: 'Board of Intermediate Education, A.P. Graduated with 90%.'
     },
     {
-      degree: 'Professional Certification',
-      institution: 'AWS Certified DevOps Engineer - Professional',
-      year: '2019'
-    },
-    {
-      degree: 'Professional Certification',
-      institution: 'Certified Kubernetes Administrator (CKA)',
-      year: '2020'
-    },
-    {
-      degree: 'Professional Certification',
-      institution: 'HashiCorp Certified Terraform Associate',
-      year: '2021'
+      degree: 'Class X',
+      institution: 'St.Johns High School, Amalapuram',
+      year: '2014',
+      description: 'Board of Secondary Education, A.P. Graduated with 9.2 GPA.'
     }
   ];
 
   return (
     <section id="education" className="py-16 bg-white">
       <div className="container mx-auto px-6">
-        <h2 className="section-title">Education & Certifications</h2>
+        <h2 className="section-title">Education</h2>
         
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {educationItems.map((edu, index) => (

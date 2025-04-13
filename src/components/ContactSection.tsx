@@ -58,8 +58,8 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-medium text-gray-500">Email</h4>
-                  <a href="mailto:john.doe@example.com" className="text-devops-navy hover:text-devops-accent transition-colors">
-                    john.doe@example.com
+                  <a href="mailto:Lakshmankumarbolisetti@gmail.com" className="text-devops-navy hover:text-devops-accent transition-colors">
+                    Lakshmankumarbolisetti@gmail.com
                   </a>
                 </div>
               </div>
@@ -70,8 +70,8 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-medium text-gray-500">Phone</h4>
-                  <a href="tel:+1234567890" className="text-devops-navy hover:text-devops-accent transition-colors">
-                    (123) 456-7890
+                  <a href="tel:+918143624813" className="text-devops-navy hover:text-devops-accent transition-colors">
+                    8143624813
                   </a>
                 </div>
               </div>
@@ -83,12 +83,12 @@ const ContactSection = () => {
                 <div>
                   <h4 className="text-sm font-medium text-gray-500">LinkedIn</h4>
                   <a 
-                    href="https://www.linkedin.com/in/johndoe/" 
+                    href="https://www.linkedin.com/in/lakshman-kumar-bolisetti/" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-devops-navy hover:text-devops-accent transition-colors"
                   >
-                    linkedin.com/in/johndoe
+                    linkedin.com/in/lakshman-kumar-bolisetti
                   </a>
                 </div>
               </div>
