@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Award, ExternalLink } from 'lucide-react';
+import { Docker } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 interface Certification {
@@ -9,7 +10,7 @@ interface Certification {
   issueDate: string;
   expiryDate: string;
   validationNumber: string;
-  image: string;
+  icon: React.ReactNode;
 }
 
 const CertificationsSection = () => {
@@ -20,7 +21,7 @@ const CertificationsSection = () => {
       issueDate: 'Sep 09, 2023',
       expiryDate: 'Sep 09, 2026',
       validationNumber: '6PH5PJ2C7JQEQQGQ',
-      image: '/lovable-uploads/58844062-c36d-415b-943c-1dfcdc2d16b2.png'
+      icon: <Award size={24} className="text-devops-accent" />
     },
     {
       title: 'AWS Certified Cloud Practitioner',
@@ -28,7 +29,7 @@ const CertificationsSection = () => {
       issueDate: 'Jan 09, 2023',
       expiryDate: 'Jan 09, 2026',
       validationNumber: '7K0JKHZ15MREQH9G',
-      image: '/lovable-uploads/4328c5cd-9a6a-427d-b5f2-7ea7b88d5cce.png'
+      icon: <Award size={24} className="text-devops-accent" />
     },
     {
       title: 'AWS Certified Developer - Associate',
@@ -36,7 +37,15 @@ const CertificationsSection = () => {
       issueDate: 'Jan 03, 2023',
       expiryDate: 'Jan 03, 2026',
       validationNumber: 'SHFN8ZJKYJR4Q2WV',
-      image: '/lovable-uploads/6e62fec6-27a5-4d34-b3ba-4d7a66bf26f5.png'
+      icon: <Award size={24} className="text-devops-accent" />
+    },
+    {
+      title: 'Docker for the Absolute Beginner',
+      issuedBy: 'KodeKloud via Udemy',
+      issueDate: 'Jul 19, 2024',
+      expiryDate: 'N/A',
+      validationNumber: '2DF185F10AE9-2DFABDBFC3D0-2DF17FBDFA41',
+      icon: <Docker size={24} className="text-devops-accent" />
     }
   ];
 
@@ -45,7 +54,7 @@ const CertificationsSection = () => {
       <div className="container mx-auto px-6">
         <h2 className="section-title">Certifications</h2>
         
-        <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {certifications.map((cert, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <div className="p-1 bg-gradient-to-r from-devops-accent to-blue-600">
@@ -54,8 +63,8 @@ const CertificationsSection = () => {
               
               <div className="p-6">
                 <div className="flex items-center mb-4">
-                  <Award className="text-devops-accent mr-2" size={24} />
-                  <h3 className="font-bold text-xl text-devops-navy">{cert.title}</h3>
+                  {cert.icon}
+                  <h3 className="font-bold text-xl text-devops-navy ml-2">{cert.title}</h3>
                 </div>
                 
                 <div className="mb-4">
@@ -76,16 +85,8 @@ const CertificationsSection = () => {
                   </Badge>
                 </div>
                 
-                <div className="rounded-md overflow-hidden border border-gray-200 mb-4">
-                  <img 
-                    src={cert.image} 
-                    alt={cert.title} 
-                    className="w-full object-cover"
-                  />
-                </div>
-                
                 <a 
-                  href="https://aws.amazon.com/verification" 
+                  href={cert.issuedBy.includes('AWS') ? "https://aws.amazon.com/verification" : "https://www.udemy.com/certificate/verify"}
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-sm text-devops-accent hover:underline inline-flex items-center gap-1"

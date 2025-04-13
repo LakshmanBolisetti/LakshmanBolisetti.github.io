@@ -49,7 +49,13 @@ const Header = () => {
               {item.name}
             </a>
           ))}
-          <a href="#resume" className="btn-primary">Resume</a>
+          <a 
+            href="/resume.pdf" 
+            className="btn-primary"
+            download="lakshman_bolisetti_resume.pdf"
+          >
+            Resume
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -76,9 +82,10 @@ const Header = () => {
               </a>
             ))}
             <a 
-              href="#resume" 
+              href="/resume.pdf" 
               className="btn-primary w-full text-center"
               onClick={() => setIsMobileMenuOpen(false)}
+              download="lakshman_bolisetti_resume.pdf"
             >
               Resume
             </a>

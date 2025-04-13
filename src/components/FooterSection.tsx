@@ -25,7 +25,7 @@ const FooterSection = () => {
           
           <div className="flex space-x-4">
             <a 
-              href="https://github.com/username" 
+              href="https://github.com/LakshmanBolisetti" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-white bg-opacity-10 p-2 rounded-full hover:bg-opacity-20 transition-all"
