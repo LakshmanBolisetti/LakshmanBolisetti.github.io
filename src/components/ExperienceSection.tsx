@@ -18,7 +18,7 @@ const ExperienceSection = () => {
       location: 'San Francisco, CA',
       period: 'Jan 2021 - Present',
       responsibilities: [
-        'Led the migration of the company's infrastructure from traditional VMs to Kubernetes, reducing deployment time by 80%',
+        'Led the migration of the company\'s infrastructure from traditional VMs to Kubernetes, reducing deployment time by 80%',
         'Implemented a CI/CD pipeline using GitHub Actions and ArgoCD, enabling automated deployments across multiple environments',
         'Designed and implemented a monitoring solution using Prometheus and Grafana, improving incident response time by 65%',
         'Automated infrastructure provisioning with Terraform, reducing the time to create new environments from days to minutes',
