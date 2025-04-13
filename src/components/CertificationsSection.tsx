@@ -1,7 +1,6 @@
 
 import React from 'react';
-import { Award, ExternalLink } from 'lucide-react';
-import { Docker } from 'lucide-react';
+import { Award, ExternalLink, FileCode } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 interface Certification {
@@ -45,7 +44,7 @@ const CertificationsSection = () => {
       issueDate: 'Jul 19, 2024',
       expiryDate: 'N/A',
       validationNumber: '2DF185F10AE9-2DFABDBFC3D0-2DF17FBDFA41',
-      icon: <Docker size={24} className="text-devops-accent" />
+      icon: <FileCode size={24} className="text-devops-accent" />
     }
   ];
 
