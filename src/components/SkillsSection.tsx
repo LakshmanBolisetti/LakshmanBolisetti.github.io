@@ -2,11 +2,11 @@
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
 import { 
-  Docker, 
-  Kubernetes, 
+  Box, // Replacing Docker
+  Network, // Replacing Kubernetes 
   Github, 
   Terminal, 
-  CloudCog, 
+  Cloud, // Replacing CloudCog with Cloud
   Database,
   Code,
   Server,
@@ -26,7 +26,7 @@ const SkillsSection = () => {
   const skills: Skill[] = [
     {
       name: 'Docker',
-      icon: Docker,
+      icon: Box, // Using Box icon for Docker
       details: [
         'Writing Dockerfiles to containerize applications',
         'Managing multi-container environments with Docker Compose',
@@ -37,7 +37,7 @@ const SkillsSection = () => {
     },
     {
       name: 'Kubernetes',
-      icon: Kubernetes,
+      icon: Network, // Using Network icon for Kubernetes
       details: [
         'Designing and deploying production-grade Kubernetes clusters',
         'Creating and managing Kubernetes resources (Pods, Deployments, Services)',
@@ -59,7 +59,7 @@ const SkillsSection = () => {
     },
     {
       name: 'Terraform',
-      icon: CloudCog,
+      icon: Cloud, // Using Cloud instead of CloudCog
       details: [
         'Writing infrastructure as code for multiple cloud providers',
         'Managing state files and implementing remote backends',
@@ -81,7 +81,7 @@ const SkillsSection = () => {
     },
     {
       name: 'AWS',
-      icon: CloudCog,
+      icon: Cloud,
       details: [
         'Designing highly available and fault-tolerant architectures',
         'Implementing security best practices with IAM',
