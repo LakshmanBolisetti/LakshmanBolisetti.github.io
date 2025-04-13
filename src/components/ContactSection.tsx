@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Mail, Phone, Linkedin, Send } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, Send } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 
 const ContactSection = () => {
@@ -78,17 +77,34 @@ const ContactSection = () => {
               
               <div className="flex items-center gap-3">
                 <div className="bg-devops-accent bg-opacity-10 p-3 rounded-lg">
+                  <Github size={20} className="text-devops-accent" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-gray-500">GitHub</h4>
+                  <a 
+                    href="https://github.com/LakshmanBolisetti" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-devops-navy hover:text-devops-accent transition-colors"
+                  >
+                    github.com/LakshmanBolisetti
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <div className="bg-devops-accent bg-opacity-10 p-3 rounded-lg">
                   <Linkedin size={20} className="text-devops-accent" />
                 </div>
                 <div>
                   <h4 className="text-sm font-medium text-gray-500">LinkedIn</h4>
                   <a 
-                    href="https://www.linkedin.com/in/lakshman-kumar-bolisetti/" 
+                    href="https://www.linkedin.com/in/lakshman-bolisetti/" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-devops-navy hover:text-devops-accent transition-colors"
                   >
-                    linkedin.com/in/lakshman-kumar-bolisetti
+                    linkedin.com/in/lakshman-bolisetti
                   </a>
                 </div>
               </div>
