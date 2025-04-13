@@ -33,7 +33,7 @@ const FooterSection = () => {
               <Github size={20} />
             </a>
             <a 
-              href="https://linkedin.com/in/username" 
+              href="https://www.linkedin.com/in/lakshman-bolisetti/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-white bg-opacity-10 p-2 rounded-full hover:bg-opacity-20 transition-all"
@@ -49,7 +49,7 @@ const FooterSection = () => {
               <Twitter size={20} />
             </a>
             <a 
-              href="mailto:john.doe@example.com"
+              href="mailto:Lakshmankumarbolisetti@gmail.com"
               className="bg-white bg-opacity-10 p-2 rounded-full hover:bg-opacity-20 transition-all"
             >
               <Mail size={20} />
@@ -59,7 +59,7 @@ const FooterSection = () => {
         
         <div className="border-t border-white border-opacity-10 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} John Doe. All rights reserved.
+            &copy; {new Date().getFullYear()} Lakshman Bolisetti. All rights reserved.
           </p>
           
           <button 

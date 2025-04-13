@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center">
         <div className="md:w-3/5 mt-8 md:mt-0 md:pr-8 animate-fade-in">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-devops-navy">
-            Hi, I'm <span className="text-devops-accent">BOLISETTI LAKSHMAN KUMAR</span>
+            Hi, I'm <span className="text-devops-accent">Lakshman Bolisetti</span>
           </h1>
           <h2 className="text-xl md:text-2xl font-medium text-gray-700 mb-6">
             Senior DevOps Engineer | Cloud Infrastructure Specialist
@@ -22,7 +22,7 @@ const HeroSection = () => {
             <a 
               href="/resume.pdf" 
               className="btn-primary"
-              download="lakshman_kumar_resume.pdf"
+              download="lakshman_bolisetti_resume.pdf"
             >
               <Download size={20} />
               Download Resume
@@ -35,8 +35,8 @@ const HeroSection = () => {
         <div className="md:w-2/5 flex justify-center animate-fade-in">
           <div className="w-56 h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
             <img 
-              src="/lovable-uploads/d346ed81-0420-4a30-874c-00db4925269a.png" 
-              alt="BOLISETTI LAKSHMAN KUMAR Profile" 
+              src="/lovable-uploads/281897e3-57aa-4383-9841-84e8a8047988.png" 
+              alt="Lakshman Bolisetti Profile" 
               className="w-full h-full object-cover"
             />
           </div>
