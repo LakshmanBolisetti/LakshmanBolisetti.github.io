@@ -64,8 +64,14 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				devops: {
-					background: '#f2f2f2',
-					navy: '#001f3f',
+					background: {
+						DEFAULT: '#f2f2f2',
+						dark: '#1A1F2C'
+					},
+					navy: {
+						DEFAULT: '#001f3f',
+						dark: '#FFFFFF'
+					},
 					accent: '#0074D9',
 					dark: '#111827',
 					light: '#ffffff',

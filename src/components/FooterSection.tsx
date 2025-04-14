@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Github, Linkedin, Instagram, Mail, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Instagram, Mail, ArrowUp, Twitter } from 'lucide-react';
 
 const FooterSection = () => {
   const scrollToTop = () => {
@@ -11,7 +11,7 @@ const FooterSection = () => {
   };
 
   return (
-    <footer className="bg-devops-navy text-white py-12">
+    <footer className="bg-devops-navy text-white py-12 dark:bg-devops-dark">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="mb-6 md:mb-0">
@@ -42,6 +42,14 @@ const FooterSection = () => {
             </a>
             <a 
               href="https://x.com/Justcalmelucky" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-white bg-opacity-10 p-2 rounded-full hover:bg-opacity-20 transition-all"
+            >
+              <Twitter size={20} />
+            </a>
+            <a 
+              href="https://www.instagram.com/lakshman___lucky?igsh=enJwemdzN2tmbzQz" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-white bg-opacity-10 p-2 rounded-full hover:bg-opacity-20 transition-all"
