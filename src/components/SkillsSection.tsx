@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
 import { 
@@ -242,30 +243,30 @@ const SkillsSection = () => {
               <div className="flex justify-between items-center mb-4">
                 <div className="flex items-center gap-3">
                   <selectedSkill.icon size={32} className="text-devops-accent" />
-                  <h3 className="text-2xl font-bold text-devops-navy">{selectedSkill.name}</h3>
+                  <h3 className="text-2xl font-bold text-devops-navy dark:text-[#1f3b6c]">{selectedSkill.name}</h3>
                 </div>
                 <button 
                   onClick={() => setSelectedSkill(null)}
-                  className="p-1 rounded-full hover:bg-gray-100"
+                  className="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
-                  <X size={24} className="text-gray-500" />
+                  <X size={24} className="text-gray-500 dark:text-gray-400" />
                 </button>
               </div>
               
               <div className="mt-4">
-                <h4 className="text-lg font-semibold mb-2 text-devops-navy">My Capabilities:</h4>
+                <h4 className="text-lg font-semibold mb-2 text-devops-navy dark:text-[#2a4d80]">My Capabilities:</h4>
                 <ul className="space-y-2">
                   {selectedSkill.details.map((detail, index) => (
                     <li key={index} className="flex items-start">
                       <div className="h-2 w-2 mt-2 rounded-full bg-devops-accent mr-2"></div>
-                      <span>{detail}</span>
+                      <span className="dark:text-[#b0b0b0]">{detail}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               
-              <div className="mt-6 pt-4 border-t border-gray-200">
-                <p className="text-gray-600 text-sm italic">
+              <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
+                <p className="text-gray-600 text-sm italic dark:text-gray-400">
                   Click anywhere outside this window to close
                 </p>
               </div>
