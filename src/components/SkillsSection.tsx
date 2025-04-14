@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
 import { 
@@ -11,7 +10,10 @@ import {
   Code,
   Server,
   BarChart,
-  Lock
+  Lock,
+  Archive,
+  CheckCircle,
+  Package
 } from 'lucide-react';
 import { LucideIcon } from 'lucide-react';
 
@@ -155,6 +157,39 @@ const SkillsSection = () => {
         'Setting up GitHub/GitLab workflows',
         'Code review processes and best practices',
         'Automating repository maintenance tasks'
+      ]
+    },
+    {
+      name: 'Podman',
+      icon: Archive,
+      details: [
+        'Creating and managing rootless containers',
+        'Migrating from Docker to Podman workflows',
+        'Implementing pod deployments for multi-container apps',
+        'Using Podman in CI/CD pipelines',
+        'Leveraging Podman for enhanced container security'
+      ]
+    },
+    {
+      name: 'SonarQube',
+      icon: CheckCircle,
+      details: [
+        'Setting up code quality gates and metrics',
+        'Integrating with CI/CD pipelines for automated analysis',
+        'Configuring custom quality profiles and rules',
+        'Managing technical debt and security vulnerabilities',
+        'Generating quality reports for teams and stakeholders'
+      ]
+    },
+    {
+      name: 'Build Tools',
+      icon: Package,
+      details: [
+        'Configuring Maven for Java application builds',
+        'Setting up Gradle for efficient dependency management',
+        'Creating custom build tasks and plugins',
+        'Optimizing build performance and caching',
+        'Integrating with CI/CD pipelines for automated builds'
       ]
     }
   ];

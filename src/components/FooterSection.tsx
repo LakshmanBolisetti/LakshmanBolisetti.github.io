@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Github, Linkedin, Twitter, Mail, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Instagram, Mail, ArrowUp } from 'lucide-react';
 
 const FooterSection = () => {
   const scrollToTop = () => {
@@ -41,12 +41,12 @@ const FooterSection = () => {
               <Linkedin size={20} />
             </a>
             <a 
-              href="https://twitter.com/username" 
+              href="https://www.instagram.com/lakshman___lucky?igsh=enJwemdzN2tmbzQz" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-white bg-opacity-10 p-2 rounded-full hover:bg-opacity-20 transition-all"
             >
-              <Twitter size={20} />
+              <Instagram size={20} />
             </a>
             <a 
               href="mailto:Lakshmankumarbolisetti@gmail.com"

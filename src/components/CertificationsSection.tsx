@@ -10,6 +10,7 @@ interface Certification {
   expiryDate: string;
   validationNumber: string;
   icon: React.ReactNode;
+  verificationLink: string;
 }
 
 const CertificationsSection = () => {
@@ -20,7 +21,8 @@ const CertificationsSection = () => {
       issueDate: 'Sep 09, 2023',
       expiryDate: 'Sep 09, 2026',
       validationNumber: '6PH5PJ2C7JQEQQGQ',
-      icon: <Award size={24} className="text-devops-accent" />
+      icon: <Award size={24} className="text-devops-accent" />,
+      verificationLink: 'https://aws.amazon.com/verification'
     },
     {
       title: 'AWS Certified Cloud Practitioner',
@@ -28,7 +30,8 @@ const CertificationsSection = () => {
       issueDate: 'Jan 09, 2023',
       expiryDate: 'Jan 09, 2026',
       validationNumber: '7K0JKHZ15MREQH9G',
-      icon: <Award size={24} className="text-devops-accent" />
+      icon: <Award size={24} className="text-devops-accent" />,
+      verificationLink: 'https://aws.amazon.com/verification'
     },
     {
       title: 'AWS Certified Developer - Associate',
@@ -36,7 +39,8 @@ const CertificationsSection = () => {
       issueDate: 'Jan 03, 2023',
       expiryDate: 'Jan 03, 2026',
       validationNumber: 'SHFN8ZJKYJR4Q2WV',
-      icon: <Award size={24} className="text-devops-accent" />
+      icon: <Award size={24} className="text-devops-accent" />,
+      verificationLink: 'https://aws.amazon.com/verification'
     },
     {
       title: 'Docker for the Absolute Beginner',
@@ -44,7 +48,8 @@ const CertificationsSection = () => {
       issueDate: 'Jul 19, 2024',
       expiryDate: 'N/A',
       validationNumber: '2DF185F10AE9-2DFABDBFC3D0-2DF17FBDFA41',
-      icon: <FileCode size={24} className="text-devops-accent" />
+      icon: <FileCode size={24} className="text-devops-accent" />,
+      verificationLink: 'https://learn.kodekloud.com/certificate/2DF185F10AE9-2DFABDBFC3D0-2DF17FBDFA41'
     }
   ];
 
@@ -85,7 +90,7 @@ const CertificationsSection = () => {
                 </div>
                 
                 <a 
-                  href={cert.issuedBy.includes('AWS') ? "https://aws.amazon.com/verification" : "https://www.udemy.com/certificate/verify"}
+                  href={cert.verificationLink}
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-sm text-devops-accent hover:underline inline-flex items-center gap-1"
