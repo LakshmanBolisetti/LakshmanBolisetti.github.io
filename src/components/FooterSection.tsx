@@ -11,7 +11,7 @@ const FooterSection = () => {
   };
 
   return (
-    <footer className="bg-devops-navy text-white py-12 dark:bg-devops-dark">
+    <footer className="bg-devops-navy text-white py-12 dark:bg-[#0a0a0a]">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="mb-6 md:mb-0">

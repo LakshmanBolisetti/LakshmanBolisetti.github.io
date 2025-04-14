@@ -81,7 +81,7 @@
   }
 
   .dark body {
-    @apply bg-devops-background-dark text-devops-navy-dark;
+    @apply bg-devops-background-dark text-white;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -91,6 +91,30 @@
   section {
     @apply py-16;
   }
+
+  /* Dark mode section backgrounds */
+  .dark section.bg-white,
+  .dark section.bg-gray-50,
+  .dark section.bg-gray-100,
+  .dark section.bg-devops-background {
+    @apply bg-devops-background-dark;
+  }
+
+  /* Dark mode card backgrounds */
+  .dark .bg-white {
+    @apply bg-devops-dark text-white;
+  }
+
+  /* Dark mode forms and inputs */
+  .dark input,
+  .dark textarea {
+    @apply bg-gray-800 text-white border-gray-700;
+  }
+
+  /* Dark mode hover states */
+  .dark .hover\:bg-gray-100:hover {
+    @apply hover:bg-gray-800;
+  }
 }
 
 @layer components {
@@ -99,7 +123,7 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-8 text-devops-navy relative pb-3 inline-block dark:text-devops-navy-dark;
+    @apply text-3xl md:text-4xl font-bold mb-8 text-devops-navy relative pb-3 inline-block dark:text-white;
   }
   
   .section-title::after {

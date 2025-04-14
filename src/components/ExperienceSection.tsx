@@ -54,13 +54,13 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" className="py-16 bg-devops-background">
+    <section id="experience" className="py-16 bg-devops-background dark:bg-devops-background-dark">
       <div className="container mx-auto px-6">
         <h2 className="section-title">Professional Experience</h2>
         
         <div className="mt-8 space-y-10 relative">
           {/* Timeline line */}
-          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 h-full w-1 bg-gray-200 hidden md:block"></div>
+          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 h-full w-1 bg-gray-200 dark:bg-gray-700 hidden md:block"></div>
           
           {experiences.map((exp, index) => (
             <div 
@@ -68,15 +68,15 @@ const ExperienceSection = () => {
               className={`relative flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
             >
               {/* Timeline dot */}
-              <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -translate-y-1/2 top-8 md:top-1/2 w-4 h-4 bg-devops-accent rounded-full border-4 border-white hidden md:block"></div>
+              <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -translate-y-1/2 top-8 md:top-1/2 w-4 h-4 bg-devops-accent rounded-full border-4 border-white dark:border-devops-background-dark hidden md:block"></div>
               
               {/* Content */}
               <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
-                <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-                  <h3 className="text-xl font-bold text-devops-navy">{exp.title}</h3>
+                <div className="bg-white dark:bg-devops-dark p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-100 dark:border-gray-700">
+                  <h3 className="text-xl font-bold text-devops-navy dark:text-white">{exp.title}</h3>
                   <h4 className="text-lg font-medium text-devops-accent mt-1 mb-2">{exp.company}</h4>
                   
-                  <div className="flex flex-wrap gap-3 text-sm text-gray-500 mb-4">
+                  <div className="flex flex-wrap gap-3 text-sm text-gray-500 dark:text-gray-400 mb-4">
                     <div className="flex items-center gap-1">
                       <MapPin size={14} />
                       <span>{exp.location}</span>
@@ -87,12 +87,12 @@ const ExperienceSection = () => {
                     </div>
                   </div>
                   
-                  <h5 className="font-semibold text-devops-navy mb-2">Responsibilities:</h5>
+                  <h5 className="font-semibold text-devops-navy dark:text-gray-200 mb-2">Responsibilities:</h5>
                   <ul className="space-y-2">
                     {exp.responsibilities.map((resp, respIndex) => (
                       <li key={respIndex} className="flex items-start">
                         <div className="h-2 w-2 mt-2 rounded-full bg-devops-accent mr-2"></div>
-                        <span className="text-gray-700">{resp}</span>
+                        <span className="text-gray-700 dark:text-gray-300">{resp}</span>
                       </li>
                     ))}
                   </ul>
