@@ -9,7 +9,7 @@ const AboutSection = () => {
         
         <div className="mt-6 text-lg text-gray-700 space-y-4 max-w-4xl">
           <p>
-            With over 8 years of experience in DevOps and cloud infrastructure, I specialize in designing, implementing, and 
+            With over 3.5+ years of experience in DevOps and cloud infrastructure, I specialize in designing, implementing, and 
             maintaining robust CI/CD pipelines that enable teams to deliver software efficiently and reliably.
           </p>
           

@@ -41,7 +41,7 @@ const FooterSection = () => {
               <Linkedin size={20} />
             </a>
             <a 
-              href="https://www.instagram.com/lakshman___lucky?igsh=enJwemdzN2tmbzQz" 
+              href="https://x.com/Justcalmelucky" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-white bg-opacity-10 p-2 rounded-full hover:bg-opacity-20 transition-all"

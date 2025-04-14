@@ -13,7 +13,9 @@ import {
   Lock,
   Archive,
   CheckCircle,
-  Package
+  Package,
+  Boxes, // For Nexus
+  CloudCog // For Azure
 } from 'lucide-react';
 import { LucideIcon } from 'lucide-react';
 
@@ -91,6 +93,17 @@ const SkillsSection = () => {
         'Managing EC2, S3, RDS, Lambda and ECS resources',
         'Setting up VPCs, subnets, and security groups',
         'Implementing CloudWatch monitoring and alerts'
+      ]
+    },
+    {
+      name: 'Azure',
+      icon: CloudCog,
+      details: [
+        'Creating and managing Azure resources using Azure CLI and Portal',
+        'Implementing Azure DevOps CI/CD pipelines',
+        'Setting up Azure Kubernetes Service (AKS)',
+        'Managing Azure Active Directory and access controls',
+        'Deploying applications to Azure App Service'
       ]
     },
     {
@@ -190,6 +203,17 @@ const SkillsSection = () => {
         'Creating custom build tasks and plugins',
         'Optimizing build performance and caching',
         'Integrating with CI/CD pipelines for automated builds'
+      ]
+    },
+    {
+      name: 'Nexus',
+      icon: Boxes,
+      details: [
+        'Setting up and managing Nexus Repository Manager',
+        'Configuring Maven, NPM, Docker and other repositories',
+        'Implementing repository access controls and permissions',
+        'Setting up proxy repositories for efficient artifact caching',
+        'Integrating Nexus with CI/CD pipelines for artifact management'
       ]
     }
   ];

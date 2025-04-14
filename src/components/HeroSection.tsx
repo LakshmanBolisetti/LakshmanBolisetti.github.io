@@ -11,7 +11,7 @@ const HeroSection = () => {
             Hi, I'm <span className="text-devops-accent">Lakshman</span>
           </h1>
           <h2 className="text-xl md:text-2xl font-medium text-gray-700 mb-6">
-            Senior DevOps Engineer | Cloud Infrastructure Specialist
+            DevOps Engineer | Cloud Infrastructure Specialist
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl">
             I bridge the gap between development and operations, streamlining workflows, automating deployments, 
