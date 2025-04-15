@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Github } from 'lucide-react';
@@ -172,12 +171,12 @@ const ProjectDetailsPage = () => {
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">{project.description}</p>
               
               <div className="mb-8">
-                <h2 className="text-xl font-semibold text-devops-navy dark:text-[#2a4d80] mb-4">Technologies</h2>
+                <h2 className="text-xl font-semibold text-white mb-4">Technologies</h2>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, index) => (
                     <span 
                       key={index}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md"
+                      className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-white rounded-md"
                     >
                       {tech}
                     </span>
@@ -186,8 +185,8 @@ const ProjectDetailsPage = () => {
               </div>
               
               <div className="mb-8">
-                <h2 className="text-xl font-semibold text-devops-navy dark:text-[#2a4d80] mb-4">Project Process</h2>
-                <ol className="list-decimal list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
+                <h2 className="text-xl font-semibold text-white mb-4">Project Process</h2>
+                <ol className="list-decimal list-inside space-y-2 text-gray-200 ml-4">
                   {project.steps.map((step, index) => (
                     <li key={index} className="pl-2">{step}</li>
                   ))}
@@ -195,8 +194,8 @@ const ProjectDetailsPage = () => {
               </div>
               
               <div className="mb-8">
-                <h2 className="text-xl font-semibold text-devops-navy dark:text-[#2a4d80] mb-4">Tools Used</h2>
-                <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
+                <h2 className="text-xl font-semibold text-white mb-4">Tools Used</h2>
+                <ul className="list-disc list-inside space-y-2 text-gray-200 ml-4">
                   {project.tools.map((tool, index) => (
                     <li key={index} className="pl-2">{tool}</li>
                   ))}
@@ -204,8 +203,8 @@ const ProjectDetailsPage = () => {
               </div>
               
               <div>
-                <h2 className="text-xl font-semibold text-devops-navy dark:text-[#2a4d80] mb-4">Outcomes</h2>
-                <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
+                <h2 className="text-xl font-semibold text-white mb-4">Outcomes</h2>
+                <ul className="list-disc list-inside space-y-2 text-gray-200 ml-4">
                   {project.outcomes.map((outcome, index) => (
                     <li key={index} className="pl-2">{outcome}</li>
                   ))}
