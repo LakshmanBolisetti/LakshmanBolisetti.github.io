@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -64,12 +63,12 @@ const ProjectsSection = () => {
                 <p className="text-gray-600 dark:text-[#b0b0b0] mb-4">{project.description}</p>
                 
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">Technologies Used:</h4>
+                  <h4 className="text-sm font-semibold text-devops-navy dark:text-white mb-2">Technologies Used:</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, techIndex) => (
                       <span 
                         key={techIndex}
-                        className="text-xs bg-gray-100 dark:bg-gray-800 text-white px-2 py-1 rounded-md"
+                        className="text-xs bg-gray-100 dark:bg-gray-800 text-devops-navy dark:text-white px-2 py-1 rounded-md"
                       >
                         {tech}
                       </span>
@@ -108,4 +107,3 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
-

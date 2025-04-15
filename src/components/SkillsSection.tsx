@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { X } from 'lucide-react';
 import { 
@@ -242,7 +243,7 @@ const SkillsSection = () => {
               <div className="flex justify-between items-center mb-4">
                 <div className="flex items-center gap-3">
                   <selectedSkill.icon size={32} className="text-devops-accent" />
-                  <h3 className="text-2xl font-bold text-white">{selectedSkill.name}</h3>
+                  <h3 className="text-2xl font-bold text-devops-navy dark:text-white">{selectedSkill.name}</h3>
                 </div>
                 <button 
                   onClick={() => setSelectedSkill(null)}
@@ -253,19 +254,19 @@ const SkillsSection = () => {
               </div>
               
               <div className="mt-4">
-                <h4 className="text-lg font-semibold mb-2 text-white">My Capabilities:</h4>
+                <h4 className="text-lg font-semibold mb-2 text-devops-navy dark:text-white">My Capabilities:</h4>
                 <ul className="space-y-2">
                   {selectedSkill.details.map((detail, index) => (
                     <li key={index} className="flex items-start">
                       <div className="h-2 w-2 mt-2 rounded-full bg-devops-accent mr-2"></div>
-                      <span className="text-gray-200">{detail}</span>
+                      <span className="text-gray-700 dark:text-gray-200">{detail}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               
               <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-                <p className="text-gray-300 text-sm italic">
+                <p className="text-gray-500 dark:text-gray-300 text-sm italic">
                   Click anywhere outside this window to close
                 </p>
               </div>
