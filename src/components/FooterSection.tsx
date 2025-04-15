@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Github, Linkedin, Instagram, Mail, ArrowUp, Twitter } from 'lucide-react';
+import DevOpsLogo from './DevOpsLogo';
 
 const FooterSection = () => {
   const scrollToTop = () => {
@@ -15,9 +16,10 @@ const FooterSection = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="mb-6 md:mb-0">
-            <h2 className="text-2xl font-bold font-poppins">
-              DevOps<span className="text-devops-accent">Pro</span>
-            </h2>
+            <DevOpsLogo 
+              className="w-24 h-8 mb-2"
+              iconClassName="text-devops-accent"
+            />
             <p className="text-gray-300 mt-2 max-w-md">
               Building scalable, resilient infrastructure and streamlining development workflows.
             </p>
