@@ -7,7 +7,7 @@ const FooterLogo: React.FC = () => {
     <div className="flex flex-col items-center">
       <Logo size="large" />
       <p className="text-sm mt-2 text-muted-foreground">
-        Continuous Integration & Delivery
+      Building scalable, resilient infrastructure and streamlining development workflows.
       </p>
     </div>
   );

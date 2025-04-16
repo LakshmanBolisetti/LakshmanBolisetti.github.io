@@ -62,7 +62,6 @@ export const Logo: React.FC<LogoProps> = ({
           selectedSize.text,
           theme === "dark" ? "text-white" : "text-gray-800"
         )}>
-          DevOps
         </span>
       )}
     </div>
