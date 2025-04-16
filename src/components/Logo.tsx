@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { useTheme } from '../providers/theme-provider';
-import { Infinity, Server } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 interface LogoProps {
@@ -20,17 +19,17 @@ export const Logo: React.FC<LogoProps> = ({
   const sizeMap = {
     small: {
       container: "h-8",
-      icon: 24,
+      logo: "h-8 w-8",
       text: "text-lg"
     },
     medium: {
       container: "h-10",
-      icon: 32,
+      logo: "h-10 w-10",
       text: "text-xl"
     },
     large: {
       container: "h-12",
-      icon: 40,
+      logo: "h-12 w-12",
       text: "text-2xl"
     }
   };
@@ -44,21 +43,14 @@ export const Logo: React.FC<LogoProps> = ({
       className
     )}>
       <div className="relative">
-        <Infinity 
+        <img 
+          src="/lovable-uploads/e2f6755d-ac8f-42e5-be8a-f9f05002a79e.png" 
+          alt="DevOps Logo" 
           className={cn(
-            "transition-colors duration-300", 
-            theme === "dark" ? "text-white" : "text-gray-800"
+            selectedSize.logo,
+            "transition-colors duration-300",
+            theme === "dark" ? "invert" : ""
           )}
-          strokeWidth={2}
-          size={selectedSize.icon} 
-        />
-        <Server 
-          className={cn(
-            "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-40 transition-colors duration-300",
-            theme === "dark" ? "text-purple-300" : "text-purple-700"
-          )}
-          strokeWidth={1.5}
-          size={selectedSize.icon * 0.6} 
         />
       </div>
       
