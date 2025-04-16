@@ -48,16 +48,10 @@ export const Logo: React.FC<LogoProps> = ({
           alt="DevOps Logo" 
           className={cn(
             selectedSize.logo,
-            "transition-colors duration-300",
-            theme === "light" 
-              ? "filter brightness-100 opacity-100" 
-              : "invert",
-            theme === "light" && "brightness-[0.4]" // New color adjustment
+            "transition-colors duration-300"
           )}
           style={{ 
-            filter: theme === "light" 
-              ? `brightness(0.4) saturate(200%) hue-rotate(190deg)` 
-              : 'none' 
+            filter: `brightness(0) saturate(100%) invert(31%) sepia(98%) saturate(1946%) hue-rotate(196deg) brightness(97%) contrast(101%)`
           }}
         />
       </div>
