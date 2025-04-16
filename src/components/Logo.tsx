@@ -49,7 +49,7 @@ export const Logo: React.FC<LogoProps> = ({
           className={cn(
             selectedSize.logo,
             "transition-colors duration-300",
-            theme === "dark" ? "invert" : ""
+            theme === "light" ? "filter brightness-0" : "invert"
           )}
         />
       </div>
