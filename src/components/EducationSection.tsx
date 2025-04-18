@@ -32,16 +32,18 @@ const EducationSection = () => {
   ];
 
   return (
-    <section id="education" className="py-16 bg-white dark:bg-devops-background-dark">
-      <div className="container mx-auto px-6">
+    <section id="education" className="py-16 bg-white dark:bg-devops-background-dark relative">
+      <div className="absolute inset-0 bg-[#0074D9] opacity-5 blur-3xl rounded-full transform -translate-y-1/2 translate-x-1/4"></div>
+      <div className="container mx-auto px-6 relative">
         <h2 className="section-title">Education</h2>
         
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {educationItems.map((edu, index) => (
             <div 
               key={index}
-              className="bg-white dark:bg-devops-dark p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-100 dark:border-gray-700"
+              className="bg-white dark:bg-devops-dark p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-100 dark:border-gray-700 relative overflow-hidden group"
             >
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-devops-accent to-blue-600"></div>
               <div className="flex items-start gap-4">
                 <div className="bg-devops-accent bg-opacity-10 dark:bg-opacity-20 p-3 rounded-lg">
                   <GraduationCap size={24} className="text-devops-accent" />
