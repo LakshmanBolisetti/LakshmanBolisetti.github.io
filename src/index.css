@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
 
 @tailwind base;
@@ -88,18 +89,10 @@
   }
 
   section {
-    @apply py-16 relative overflow-hidden;
+    @apply py-16;
   }
 
-  section::before {
-    content: '';
-    @apply absolute inset-0 bg-[#0074D9] opacity-5 blur-3xl rounded-full transform -translate-y-1/2 translate-x-1/4 pointer-events-none;
-  }
-
-  .section-content {
-    @apply relative z-10;
-  }
-
+  /* Dark mode section backgrounds */
   .dark section.bg-white,
   .dark section.bg-gray-50,
   .dark section.bg-gray-100,
@@ -107,15 +100,18 @@
     @apply bg-devops-background-dark;
   }
 
+  /* Dark mode card backgrounds */
   .dark .bg-white {
     @apply bg-devops-dark text-white;
   }
 
+  /* Dark mode forms and inputs */
   .dark input,
   .dark textarea {
     @apply bg-gray-800 text-white border-gray-700;
   }
 
+  /* Dark mode hover states */
   .dark .hover\:bg-gray-100:hover {
     @apply hover:bg-gray-800;
   }
