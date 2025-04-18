@@ -124,27 +124,31 @@
     @apply hover:bg-gray-800;
   }
 
-  /* Enhanced glow effects */
   .bg-white.dark\:bg-devops-dark,
   .profile-image-container,
   .certification-card,
   .project-card {
     @apply relative;
   }
-
+  /* Enhanced glow effect for better visibility */
   .bg-white.dark\:bg-devops-dark::after,
   .profile-image-container::after,
   .certification-card::after,
   .project-card::after {
     content: '';
-    @apply absolute -inset-1 bg-[#0074D9] opacity-10 blur-lg -z-10 transition-opacity duration-300;
+    @apply absolute -inset-0 rounded-lg;
+    background: radial-gradient(circle, #0074D9 0%, transparent 80%);
+    opacity: 0.25;
+    filter: blur(20px);
+    z-index: -1;
+    transition: opacity 0.3s ease-in-out;
   }
-
+  
   .bg-white.dark\:bg-devops-dark:hover::after,
   .profile-image-container:hover::after,
   .certification-card:hover::after,
   .project-card:hover::after {
-    @apply opacity-20;
+    opacity: 0.5;
   }
 }
 

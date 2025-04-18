@@ -17,7 +17,7 @@ const HeroSection = () => {
         setTimeout(() => {
           setText('');
           startTyping();
-        }, 500); // 0.5 second pause between cycles
+        }, 1200); // 0.5 second pause between cycles
       }
     }, 100);
 
