@@ -1,11 +1,32 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import HeaderLogo from './HeaderLogo';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Show header at the top of the page
+      if (currentScrollY < 50) {
+        setIsVisible(true);
+      } else {
+        // Hide when scrolling down, show when scrolling up
+        setIsVisible(currentScrollY < lastScrollY);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   const navigationItems = [
     { name: 'Home', href: '#home' },
@@ -19,7 +40,11 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed w-full z-30 bg-white/95 dark:bg-devops-dark/95 shadow-md backdrop-blur-sm py-4">
+    <header 
+      className={`fixed w-full z-30 bg-white/95 dark:bg-devops-dark/95 shadow-md backdrop-blur-sm py-4 transition-transform duration-300 ${
+        isVisible ? 'translate-y-0' : '-translate-y-full'
+      }`}
+    >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <a href="#home" className="flex items-center">
           <HeaderLogo />
