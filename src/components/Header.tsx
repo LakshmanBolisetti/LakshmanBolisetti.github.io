@@ -1,27 +1,11 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import HeaderLogo from './HeaderLogo';
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   const navigationItems = [
     { name: 'Home', href: '#home' },
@@ -35,7 +19,7 @@ const Header = () => {
   ];
 
   return (
-    <header className={`fixed w-full z-30 transition-all duration-300 ${isScrolled ? 'bg-white dark:bg-devops-dark shadow-md py-3' : 'bg-transparent py-5'}`}>
+    <header className="fixed w-full z-30 bg-white/95 dark:bg-devops-dark/95 shadow-md backdrop-blur-sm py-4">
       <div className="container mx-auto px-6 flex justify-between items-center">
         <a href="#home" className="flex items-center">
           <HeaderLogo />
@@ -47,7 +31,7 @@ const Header = () => {
             <a
               key={item.name}
               href={item.href}
-              className={`font-medium transition-colors hover:text-devops-accent ${isScrolled ? 'text-devops-navy dark:text-devops-navy-dark' : 'text-devops-navy dark:text-devops-navy-dark'}`}
+              className="font-medium transition-colors hover:text-devops-accent text-devops-navy dark:text-devops-navy-dark"
             >
               {item.name}
             </a>
@@ -76,7 +60,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <nav className="md:hidden bg-white dark:bg-devops-dark shadow-lg absolute top-full left-0 right-0 py-4 animate-fade-in">
+        <nav className="md:hidden bg-white/95 dark:bg-devops-dark/95 backdrop-blur-sm shadow-lg absolute top-full left-0 right-0 py-4 animate-fade-in">
           <div className="container mx-auto px-6 flex flex-col space-y-4">
             {navigationItems.map((item) => (
               <a
