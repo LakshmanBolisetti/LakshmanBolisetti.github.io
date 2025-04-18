@@ -1,14 +1,35 @@
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Download } from 'lucide-react';
 
 const HeroSection = () => {
+  const [text, setText] = useState('');
+  const fullText = "Hi, I'm Lakshman";
+  
+  useEffect(() => {
+    let currentIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (currentIndex <= fullText.length) {
+        setText(fullText.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        // Reset for continuous animation
+        setTimeout(() => {
+          currentIndex = 0;
+          setText('');
+        }, 2000); // Wait 2 seconds before restarting
+      }
+    }, 100);
+
+    return () => clearInterval(typingInterval);
+  }, []);
+
   return (
     <section id="home" className="pt-28 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-devops-background to-gray-200 dark:from-devops-background-dark dark:to-gray-900 transition-colors duration-300">
       <div className="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center">
         <div className="md:w-3/5 mt-8 md:mt-0 md:pr-8 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-devops-navy dark:text-white">
-            Hi, I'm <span className="text-devops-accent">Lakshman</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-devops-navy dark:text-white min-h-[72px]">
+            <span className="text-devops-navy dark:text-white">{text.slice(0, 8)}</span>
+            <span style={{ color: '#0074D9' }}>{text.slice(8)}</span>
           </h1>
           <h2 className="text-xl md:text-2xl font-medium text-gray-700 dark:text-gray-300 mb-6">
             DevOps Engineer | Cloud Infrastructure Specialist
