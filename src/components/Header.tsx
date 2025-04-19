@@ -41,7 +41,7 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed w-full z-30 bg-white/95 dark:bg-devops-dark/95 shadow-md backdrop-blur-sm py-4 transition-transform duration-300 ${
+      className={`fixed w-full z-30 bg-white/95 dark:bg-devops-dark/95 shadow-md backdrop-blur-sm py-2 transition-transform duration-300 ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
@@ -56,7 +56,7 @@ const Header = () => {
             <a
               key={item.name}
               href={item.href}
-              className="font-medium transition-colors hover:text-devops-accent text-devops-navy dark:text-devops-navy-dark"
+              className="text-sm font-medium transition-colors hover:text-devops-accent text-devops-navy dark:text-devops-navy-dark"
             >
               {item.name}
             </a>
@@ -64,7 +64,7 @@ const Header = () => {
           <ThemeToggle />
           <a 
             href="/resume.pdf" 
-            className="btn-primary"
+            className="btn-primary text-sm px-4 py-2"
             download="lakshman_bolisetti_resume.pdf"
           >
             Resume
@@ -85,13 +85,13 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <nav className="md:hidden bg-white/95 dark:bg-devops-dark/95 backdrop-blur-sm shadow-lg absolute top-full left-0 right-0 py-4 animate-fade-in">
-          <div className="container mx-auto px-6 flex flex-col space-y-4">
+        <nav className="md:hidden bg-white/95 dark:bg-devops-dark/95 backdrop-blur-sm shadow-lg absolute top-full left-0 right-0 py-2 animate-fade-in">
+          <div className="container mx-auto px-6 flex flex-col space-y-2">
             {navigationItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="font-medium py-2 transition-colors hover:text-devops-accent dark:text-devops-navy-dark"
+                className="font-medium py-1 text-sm transition-colors hover:text-devops-accent dark:text-devops-navy-dark"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
@@ -99,7 +99,7 @@ const Header = () => {
             ))}
             <a 
               href="/resume.pdf" 
-              className="btn-primary w-full text-center"
+              className="btn-primary w-full text-center text-sm py-2"
               onClick={() => setIsMobileMenuOpen(false)}
               download="lakshman_bolisetti_resume.pdf"
             >
