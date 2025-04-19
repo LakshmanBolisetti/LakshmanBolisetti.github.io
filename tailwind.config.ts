@@ -63,19 +63,25 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
+				// Sunset Horizon palette
+				sunset: {
+					skyBlue: '#00BFFF',
+					coral: '#FF7F50',
+					gold: '#FFD700',
+					lavender: '#E6E6FA',
+					mint: '#98FF98',
+				},
 				devops: {
 					background: {
 						DEFAULT: '#f2f2f2',
-						dark: '#121212'
+						dark: '#1A1F2C'
 					},
 					navy: {
-						DEFAULT: '#00BFFF', // Electric Blue
+						DEFAULT: '#001f3f',
 						dark: '#FFFFFF'
 					},
-					accent: '#39FF14', // Neon Green
-					coral: '#FF6F61', // Bright Coral
-					yellow: '#FFD700', // Sunny Yellow
-					dark: '#1e1e1e',
+					accent: '#00BFFF', // Changed from #0074D9 to Deep Sky Blue
+					dark: '#111827',
 					light: '#ffffff',
 					muted: '#64748b'
 				}
@@ -130,12 +136,12 @@ export default {
 						transform: 'translateY(-10px)'
 					}
 				},
-				'pulse-glow': {
+				'pulse-light': {
 					'0%, 100%': {
-						boxShadow: '0 0 5px 2px rgba(255, 215, 0, 0.5)'
+						opacity: '1'
 					},
 					'50%': {
-						boxShadow: '0 0 15px 5px rgba(255, 215, 0, 0.8)'
+						opacity: '0.7'
 					}
 				}
 			},
@@ -144,18 +150,15 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.3s ease-out',
 				'scale-in': 'scale-in 0.2s ease-out',
-				'float': 'float 3s ease-in-out infinite',
-				'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
+				'float': 'float 6s ease-in-out infinite',
+				'pulse-light': 'pulse-light 3s ease-in-out infinite'
 			},
 			fontFamily: {
 				poppins: ['Poppins', 'sans-serif'],
 				opensans: ['Open Sans', 'sans-serif']
 			},
 			backgroundImage: {
-				'gradient-flow': 'linear-gradient(to right, #00BFFF, #FF6F61)',
-				'gradient-skills': 'linear-gradient(to top right, #39FF14, #FFD700)',
-				'gradient-projects': 'linear-gradient(to bottom left, #FF6F61, #00BFFF)',
-				'gradient-contact': 'linear-gradient(to bottom, #00BFFF, #121212)'
+				'sunset-gradient': 'linear-gradient(135deg, #00BFFF 0%, #FF7F50 100%)'
 			}
 		}
 	},

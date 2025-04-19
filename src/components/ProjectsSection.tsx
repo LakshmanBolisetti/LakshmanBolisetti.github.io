@@ -41,21 +41,21 @@ const ProjectsSection = () => {
   ]);
 
   return (
-    <section id="projects" className="py-16 bg-white dark:bg-devops-background-dark">
+    <section id="projects" className="py-16 bg-gradient-to-r from-sunset-lavender/20 to-white dark:from-devops-dark dark:to-devops-background-dark">
       <div className="container mx-auto px-6">
-        <h2 className="section-title mx-auto text-center dark:text-white">Featured Projects</h2>
+        <h2 className="section-title dark:text-white">Featured Projects</h2>
         
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="bg-white dark:bg-devops-dark rounded-lg overflow-hidden shadow-lg border border-devops-navy/10 dark:border-devops-coral/20 hover:shadow-xl transition-shadow transform hover:scale-105 transition-all duration-300"
+              className="bg-white dark:bg-devops-dark rounded-lg overflow-hidden shadow-lg border border-sunset-skyBlue/20 dark:border-gray-800 hover:shadow-xl transition-shadow project-card"
             >
               <div className="h-48 overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-center transform transition-transform hover:scale-105"
                 />
               </div>
               
@@ -69,7 +69,7 @@ const ProjectsSection = () => {
                     {project.technologies.map((tech, techIndex) => (
                       <span 
                         key={techIndex}
-                        className="text-xs bg-gray-100 dark:bg-gray-800 text-devops-navy dark:text-white px-2 py-1 rounded-md hover:bg-devops-accent hover:text-white transition-colors"
+                        className="text-xs bg-sunset-lavender/50 dark:bg-gray-800 text-devops-navy dark:text-white px-2 py-1 rounded-md"
                       >
                         {tech}
                       </span>
@@ -83,18 +83,18 @@ const ProjectsSection = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-sm text-devops-navy dark:text-[#9eacc9] hover:text-devops-coral dark:hover:text-devops-coral transition-colors"
+                      className="flex items-center gap-1 text-sm text-devops-navy dark:text-[#9eacc9] hover:text-sunset-coral dark:hover:text-sunset-coral transition-colors"
                     >
-                      <Github size={16} />
+                      <Github size={16} className="pulse-icon" />
                       <span>Source Code</span>
                     </a>
                   )}
                   
                   <Link
                     to={`/project/${project.slug}`}
-                    className="flex items-center gap-1 text-sm text-devops-navy dark:text-[#9eacc9] hover:text-devops-coral dark:hover:text-devops-coral transition-colors"
+                    className="flex items-center gap-1 text-sm text-devops-navy dark:text-[#9eacc9] hover:text-sunset-coral dark:hover:text-sunset-coral transition-colors"
                   >
-                    <ExternalLink size={16} />
+                    <ExternalLink size={16} className="floating-icon" />
                     <span>View Details</span>
                   </Link>
                 </div>
