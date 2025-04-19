@@ -51,7 +51,7 @@ export const Logo: React.FC<LogoProps> = ({
             "transition-colors duration-300"
           )}
           style={{ 
-            filter: `brightness(0) saturate(100%) invert(31%) sepia(98%) saturate(1946%) hue-rotate(196deg) brightness(97%) contrast(101%)`
+            filter: `brightness(0) saturate(100%) invert(57%) sepia(89%) saturate(1824%) hue-rotate(179deg) brightness(104%) contrast(104%)`
           }}
         />
       </div>
@@ -62,6 +62,7 @@ export const Logo: React.FC<LogoProps> = ({
           selectedSize.text,
           theme === "dark" ? "text-white" : "text-gray-800"
         )}>
+          DevOps Infinity
         </span>
       )}
     </div>

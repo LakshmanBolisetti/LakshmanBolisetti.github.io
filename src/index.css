@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
 
 @tailwind base;
@@ -15,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 221.2 83% 53.3%;
+    --primary: 196 100% 50%;  /* Electric Blue #00BFFF */
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -24,7 +25,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    --accent: 126 100% 54%;  /* Neon Green #39FF14 */
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -32,7 +33,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83% 53.3%;
+    --ring: 196 100% 50%;  /* Electric Blue #00BFFF */
 
     --radius: 0.5rem;
   }
@@ -47,7 +48,7 @@
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 98%;
+    --primary: 196 100% 50%;  /* Electric Blue #00BFFF */
     --primary-foreground: 240 5.9% 10%;
 
     --secondary: 240 3.7% 15.9%;
@@ -56,7 +57,7 @@
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
 
-    --accent: 240 3.7% 15.9%;
+    --accent: 126 100% 54%;  /* Neon Green #39FF14 */
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -64,7 +65,7 @@
 
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --ring: 196 100% 50%;  /* Electric Blue #00BFFF */
   }
 
   * {
@@ -93,11 +94,42 @@
 
   section::before {
     content: '';
-    @apply absolute inset-0 bg-[#0074D9] opacity-5 blur-3xl rounded-full transform -translate-y-1/2 translate-x-1/4 pointer-events-none;
+    @apply absolute inset-0 bg-devops-accent opacity-5 blur-3xl rounded-full transform -translate-y-1/2 translate-x-1/4 pointer-events-none;
   }
 
   .section-content {
     @apply relative z-10;
+  }
+
+  /* Section-specific backgrounds */
+  #home {
+    @apply bg-gradient-flow;
+  }
+
+  #skills {
+    @apply bg-gradient-skills;
+  }
+
+  #projects {
+    @apply bg-gradient-projects;
+  }
+
+  #contact {
+    @apply bg-gradient-contact;
+  }
+
+  /* Floating animation for skill icons */
+  .skill-icon:hover {
+    @apply animate-float;
+  }
+
+  .skill-icon:hover svg {
+    @apply text-devops-yellow transition-colors duration-300;
+  }
+
+  /* Glowing effects for important elements */
+  .btn-primary:hover {
+    @apply animate-pulse-glow;
   }
 
   /* Dark mode section backgrounds */
@@ -137,7 +169,7 @@
   .project-card::after {
     content: '';
     @apply absolute -inset-0 rounded-lg;
-    background: radial-gradient(circle, #0074D9 0%, transparent 80%);
+    background: radial-gradient(circle, #00BFFF 0%, transparent 80%);
     opacity: 0.25;
     filter: blur(20px);
     z-index: -1;
@@ -154,16 +186,16 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-devops-accent hover:bg-opacity-90 text-white px-6 py-3 rounded-md font-medium transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2;
+    @apply bg-devops-navy hover:bg-devops-accent text-white px-6 py-3 rounded-md font-medium transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2;
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-8 text-devops-navy relative pb-3 inline-block dark:text-white;
+    @apply text-3xl md:text-4xl font-bold mb-8 text-white relative pb-3 inline-block;
   }
   
   .section-title::after {
     content: "";
-    @apply absolute left-0 bottom-0 w-2/3 h-1 bg-devops-accent rounded;
+    @apply absolute left-0 bottom-0 w-2/3 h-1 bg-devops-yellow rounded;
   }
   
   .skill-icon {

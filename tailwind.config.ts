@@ -66,14 +66,16 @@ export default {
 				devops: {
 					background: {
 						DEFAULT: '#f2f2f2',
-						dark: '#1A1F2C'
+						dark: '#121212'
 					},
 					navy: {
-						DEFAULT: '#001f3f',
+						DEFAULT: '#00BFFF', // Electric Blue
 						dark: '#FFFFFF'
 					},
-					accent: '#0074D9',
-					dark: '#111827',
+					accent: '#39FF14', // Neon Green
+					coral: '#FF6F61', // Bright Coral
+					yellow: '#FFD700', // Sunny Yellow
+					dark: '#1e1e1e',
 					light: '#ffffff',
 					muted: '#64748b'
 				}
@@ -119,17 +121,41 @@ export default {
 						opacity: '1',
 						transform: 'scale(1)'
 					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 5px 2px rgba(255, 215, 0, 0.5)'
+					},
+					'50%': {
+						boxShadow: '0 0 15px 5px rgba(255, 215, 0, 0.8)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.3s ease-out',
-				'scale-in': 'scale-in 0.2s ease-out'
+				'scale-in': 'scale-in 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
 			},
 			fontFamily: {
 				poppins: ['Poppins', 'sans-serif'],
 				opensans: ['Open Sans', 'sans-serif']
+			},
+			backgroundImage: {
+				'gradient-flow': 'linear-gradient(to right, #00BFFF, #FF6F61)',
+				'gradient-skills': 'linear-gradient(to top right, #39FF14, #FFD700)',
+				'gradient-projects': 'linear-gradient(to bottom left, #FF6F61, #00BFFF)',
+				'gradient-contact': 'linear-gradient(to bottom, #00BFFF, #121212)'
 			}
 		}
 	},
