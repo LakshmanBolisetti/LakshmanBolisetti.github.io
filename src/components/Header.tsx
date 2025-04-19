@@ -56,7 +56,7 @@ const Header = () => {
             <a
               key={item.name}
               href={item.href}
-              className="font-medium transition-colors hover:text-sunset-coral text-devops-navy dark:text-devops-navy-dark"
+              className="font-medium transition-colors hover:text-devops-accent text-devops-navy dark:text-devops-navy-dark"
             >
               {item.name}
             </a>
@@ -64,7 +64,7 @@ const Header = () => {
           <ThemeToggle />
           <a 
             href="/resume.pdf" 
-            className="bg-sunset-skyBlue hover:bg-sunset-coral text-white px-6 py-2 rounded-md font-medium transition-colors"
+            className="btn-primary"
             download="lakshman_bolisetti_resume.pdf"
           >
             Resume
@@ -91,7 +91,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="font-medium py-2 transition-colors hover:text-sunset-coral dark:text-devops-navy-dark"
+                className="font-medium py-2 transition-colors hover:text-devops-accent dark:text-devops-navy-dark"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
@@ -99,7 +99,7 @@ const Header = () => {
             ))}
             <a 
               href="/resume.pdf" 
-              className="bg-sunset-skyBlue hover:bg-sunset-coral text-white px-6 py-2 rounded-md font-medium transition-colors w-full text-center"
+              className="btn-primary w-full text-center"
               onClick={() => setIsMobileMenuOpen(false)}
               download="lakshman_bolisetti_resume.pdf"
             >

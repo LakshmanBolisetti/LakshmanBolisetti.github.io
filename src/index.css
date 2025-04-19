@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
 
 @tailwind base;
@@ -77,11 +76,11 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-white to-sunset-lavender text-devops-navy font-opensans transition-colors duration-300;
+    @apply bg-devops-background text-devops-navy font-opensans transition-colors duration-300;
   }
 
   .dark body {
-    @apply bg-gradient-to-br from-devops-background-dark to-[#1A1F2C] text-white;
+    @apply bg-devops-background-dark text-white;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -94,7 +93,7 @@
 
   section::before {
     content: '';
-    @apply absolute inset-0 bg-sunset-skyBlue opacity-5 blur-3xl rounded-full transform -translate-y-1/2 translate-x-1/4 pointer-events-none;
+    @apply absolute inset-0 bg-[#0074D9] opacity-5 blur-3xl rounded-full transform -translate-y-1/2 translate-x-1/4 pointer-events-none;
   }
 
   .section-content {
@@ -128,19 +127,17 @@
   .bg-white.dark\:bg-devops-dark,
   .profile-image-container,
   .certification-card,
-  .project-card,
-  .skill-icon {
+  .project-card {
     @apply relative;
   }
   /* Enhanced glow effect for better visibility */
   .bg-white.dark\:bg-devops-dark::after,
   .profile-image-container::after,
   .certification-card::after,
-  .project-card::after,
-  .skill-icon::after {
+  .project-card::after {
     content: '';
     @apply absolute -inset-0 rounded-lg;
-    background: radial-gradient(circle, #00BFFF 0%, transparent 80%);
+    background: radial-gradient(circle, #0074D9 0%, transparent 80%);
     opacity: 0.25;
     filter: blur(20px);
     z-index: -1;
@@ -150,30 +147,14 @@
   .bg-white.dark\:bg-devops-dark:hover::after,
   .profile-image-container:hover::after,
   .certification-card:hover::after,
-  .project-card:hover::after,
-  .skill-icon:hover::after {
+  .project-card:hover::after {
     opacity: 0.5;
-  }
-
-  /* Floating animation for icons */
-  .floating-icon {
-    @apply animate-float;
-  }
-
-  /* Pulsing animation */
-  .pulse-icon {
-    @apply animate-pulse-light;
-  }
-
-  /* Sunset gradient backgrounds */
-  .bg-sunset-gradient {
-    @apply bg-gradient-to-br from-sunset-skyBlue to-sunset-coral;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-sunset-coral hover:bg-sunset-gold text-white px-6 py-3 rounded-md font-medium transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2;
+    @apply bg-devops-accent hover:bg-opacity-90 text-white px-6 py-3 rounded-md font-medium transition-all transform hover:scale-105 inline-flex items-center justify-center gap-2;
   }
   
   .section-title {
@@ -182,7 +163,7 @@
   
   .section-title::after {
     content: "";
-    @apply absolute left-0 bottom-0 w-2/3 h-1 bg-sunset-skyBlue rounded;
+    @apply absolute left-0 bottom-0 w-2/3 h-1 bg-devops-accent rounded;
   }
   
   .skill-icon {

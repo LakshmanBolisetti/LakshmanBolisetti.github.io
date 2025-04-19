@@ -42,7 +42,7 @@ export const Logo: React.FC<LogoProps> = ({
       selectedSize.container, 
       className
     )}>
-      <div className="relative floating-icon">
+      <div className="relative">
         <img 
           src="/lovable-uploads/e2f6755d-ac8f-42e5-be8a-f9f05002a79e.png" 
           alt="DevOps Logo" 
