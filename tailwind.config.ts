@@ -63,14 +63,6 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Sunset Horizon palette
-				sunset: {
-					skyBlue: '#00BFFF',
-					coral: '#FF7F50',
-					gold: '#FFD700',
-					lavender: '#E6E6FA',
-					mint: '#98FF98',
-				},
 				devops: {
 					background: {
 						DEFAULT: '#f2f2f2',
@@ -80,7 +72,7 @@ export default {
 						DEFAULT: '#001f3f',
 						dark: '#FFFFFF'
 					},
-					accent: '#00BFFF', // Changed from #0074D9 to Deep Sky Blue
+					accent: '#0074D9',
 					dark: '#111827',
 					light: '#ffffff',
 					muted: '#64748b'
@@ -127,38 +119,17 @@ export default {
 						opacity: '1',
 						transform: 'scale(1)'
 					}
-				},
-				'float': {
-					'0%, 100%': {
-						transform: 'translateY(0)'
-					},
-					'50%': {
-						transform: 'translateY(-10px)'
-					}
-				},
-				'pulse-light': {
-					'0%, 100%': {
-						opacity: '1'
-					},
-					'50%': {
-						opacity: '0.7'
-					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.3s ease-out',
-				'scale-in': 'scale-in 0.2s ease-out',
-				'float': 'float 6s ease-in-out infinite',
-				'pulse-light': 'pulse-light 3s ease-in-out infinite'
+				'scale-in': 'scale-in 0.2s ease-out'
 			},
 			fontFamily: {
 				poppins: ['Poppins', 'sans-serif'],
 				opensans: ['Open Sans', 'sans-serif']
-			},
-			backgroundImage: {
-				'sunset-gradient': 'linear-gradient(135deg, #00BFFF 0%, #FF7F50 100%)'
 			}
 		}
 	},
